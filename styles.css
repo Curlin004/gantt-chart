@@ -1,0 +1,121 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    font-size: 14px;
+    background-color: #1E90FF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0078e7;
+}
+
+.gantt-chart {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    border: 1px solid #ccc;
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: auto;
+}
+
+.gantt-header {
+    display: flex;
+    background-color: #1E90FF;
+    color: white;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.gantt-dates {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.gantt-dates div {
+    flex: 1;
+    padding: 5px;
+    text-align: center;
+    border-right: 1px solid #ccc;
+}
+
+.gantt-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.gantt-row {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding: 5px 0;
+}
+
+.task-name {
+    flex: 1;
+    padding: 0 10px;
+    text-align: left;
+    border-right: 1px solid #ddd;
+    font-weight: bold;
+    background: #f3f3f3;
+}
+
+.task-name[contenteditable="true"] {
+    outline: 1px solid #0078e7;
+}
+
+.gantt-timeline {
+    flex: 3;
+    position: relative;
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.bar {
+    position: absolute;
+    height: 20px;
+    background-color: #1E90FF;
+    color: white;
+    text-align: center;
+    line-height: 20px;
+    border-radius: 4px;
+    cursor: grab;
+}
+
+.bar:focus {
+    outline: 2px solid #0078e7;
+    cursor: grabbing;
+}
+
+.bar:hover {
+    background-color: #0078e7;
+}
